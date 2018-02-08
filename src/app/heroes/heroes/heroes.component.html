@@ -1,10 +1,33 @@
 <div class="page-content">
   <h3>Heroes</h3>
 
-  <mat-list role="list" *ngIf="heroes && heroes.length">
+  <!-- <mat-list role="list" *ngIf="heroes && heroes.length">
     <mat-list-item role="listitem" *ngFor="let hero of heroes">
       <div>{{ hero.name }}</div>
     </mat-list-item>
-  </mat-list>
+  </mat-list> -->
 
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Heros</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul class="heros">
+        <li class="item-container" *ngFor="let hero of heroes">
+          <button mat-button mat-suffix mat-icon-button color="accent" matTooltip="Delete the hero" class="delete-button" aria-label="Delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <div class="selectable-item">
+            <div class="badge">{{hero.id}}</div>
+
+            <div class="item-text">
+              <div class="name">{{hero.name}}</div>
+
+              <div class="saying">{{hero.saying}}</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
 </div>
