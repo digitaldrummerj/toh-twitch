@@ -3,13 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HeroesComponent } from './heroes/heroes.component';
 
-const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'heroes' },
-  { path: 'heroes', component: HeroesComponent },
-];
+const routes: Routes = [{ path: '', pathMatch: 'full', component: HeroesComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HeroesRoutingModule { }
+export class HeroesRoutingModule {}
