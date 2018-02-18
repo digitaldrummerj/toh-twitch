@@ -7,17 +7,7 @@
     {
       "root": "src/client",
       "outDir": "dist/publicweb",
-      "assets": [
-        "assets",
-        "favicon.ico",
-        "heroes.json",
-        {
-          "allowOutsideOutDir": true,
-          "glob": "**/*.*",
-          "input": "../server/",
-          "output": "../"
-        }
-      ],
+      "assets": ["assets", "favicon.ico", "heroes.json"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
